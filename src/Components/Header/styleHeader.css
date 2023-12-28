@@ -1,0 +1,47 @@
+.kasa-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    img{
+        transition: transform 200ms;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    color: #FF6060;
+    flex-shrink: 0;
+    a{
+        text-decoration: none;
+        font-size: 1.5em;
+        margin-left: 57px;
+        border: transparent solid 1px
+    }
+    a:hover{
+        border-bottom: #FF6060 solid 1px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .kasa-header{
+        padding: 27px;
+    }
+
+    ul {
+        padding-left: 0;
+        a{
+            font-size: 1em;
+            margin-left: 26px;
+        }
+    }
+
+    img{
+        width: 145px;
+        height: 47px;
+    }    
+}

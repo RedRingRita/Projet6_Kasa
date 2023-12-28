@@ -1,0 +1,8 @@
+.bgGrey{
+    display: flex;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    max-width: 90vw;
+    margin: 40px;
+    padding: 40px;
+}

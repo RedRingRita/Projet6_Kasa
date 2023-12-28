@@ -1,0 +1,19 @@
+.bar{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    height: 3vh;
+    border-radius: 5px;
+    color: white;
+    background-color: #FF6060;
+    font-size: 1.5em;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.bar img:hover{
+    transition: transform 400ms;
+    transform: rotate(180deg);
+}
