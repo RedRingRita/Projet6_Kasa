@@ -1,9 +1,15 @@
-.bar{
+.blockCollapse{
+    position: relative;
     display: flex;
-    align-self: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blockCollapse__redbar{
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70vw;
+    width: 60vw;
     height: 3vh;
     border-radius: 5px;
     color: white;
@@ -13,7 +19,40 @@
     padding: 10px;
 }
 
-.bar img:hover{
+.blockCollapse__btnArrow{
+    cursor: pointer;
+    position: absolute;
+    top: 27%;
+    right: 20%;
     transition: transform 400ms;
+}
+
+
+.blockCollapse__greybg{
+    width: 60vw;
+    background-color: #f6f6f6;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 400ms cubic-bezier(.32, 0, .07, 1);
+    overflow: hidden;
+}
+
+.blockCollapse__text{
+    color: #FF6060;
+    transform: translateY(-250%);
+    transition: transform 400ms cubic-bezier(.32, 0, .07, 1) 20ms;
+}
+
+.blockCollapse__btnArrow:active{
     transform: rotate(180deg);
+    
+}
+
+.blockCollapse__btnArrow:active + .blockCollapse__greybg{
+    transform: scaleY(1);
+    .blockCollapse__text{
+        transform: translateY(0);
+    }
 }

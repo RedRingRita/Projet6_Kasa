@@ -1,8 +1,14 @@
 .bgGrey{
     display: flex;
+    align-self: center;
     background-color: #F6F6F6;
     border-radius: 25px;
-    max-width: 90vw;
+    max-width: 80vw;
     margin: 40px;
-    padding: 40px;
+}
+
+@media screen and (max-width: 950px) {
+    .bgGrey{
+        max-width: 90vw;
+    }
 }

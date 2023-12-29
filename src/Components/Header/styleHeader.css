@@ -27,7 +27,7 @@ ul{
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
     .kasa-header{
         padding: 27px;
     }
@@ -40,7 +40,7 @@ ul{
         }
     }
 
-    img{
+    .kasa-header img{
         width: 145px;
         height: 47px;
     }    
