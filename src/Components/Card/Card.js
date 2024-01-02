@@ -1,16 +1,18 @@
 import logements from "../../database/logements.json"
 import "./styleCard.css"
+import {Link} from "react-router-dom"
+
+
 
 function Card(){
     return(
         <div className="containerCards">
-            {logements.map((lieu) => (
-                <div key={lieu.id} className="card">
-                    <img  src={lieu.cover} alt={lieu.title}></img>
-                    <div className="cardText">{lieu.title}</div>
+            {logements.map((house) => (
+                <div key={house.id} className="card">
+                    <Link to={`/housing/${house.id}`}> <img src={house.cover} alt={house.title}></img> </Link>
+                    <div className="cardText">{house.title}</div>                        
                 </div>
-                    )
-                )
+                ))
             }
         </div>
     )

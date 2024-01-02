@@ -1,0 +1,46 @@
+.blockCollapse__redbar{
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    gap: 15px;
+    align-self: center;
+    align-items: center;
+    height: 3vh;
+    border-radius: 5px;
+    color: white;
+    background-color: #FF6060;
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+.blockCollapse__btnArrow{
+    cursor: pointer;
+    transition: transform 400ms;
+}
+
+.blockCollapse__greybg{
+    width: 60vw;
+    background-color: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 400ms cubic-bezier(.32, 0, .07, 1);
+    /* overflow: hidden; */
+}
+
+.blockCollapse__text{
+    color: #FF6060;
+    /* transform: translateY(-150%); */
+    transition: transform 400ms cubic-bezier(.32, 0, .07, 1) 20ms;
+}
+
+.blockCollapse__btnArrow:active{
+    transform: rotate(180deg);
+    
+}
+
+.blockCollapse__btnArrow:active + .blockCollapse__greybg{
+    transform: scaleY(1);
+    .blockCollapse__text{
+        transform: translateY(0);
+    }
+}

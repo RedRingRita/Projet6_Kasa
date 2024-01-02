@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.blockCollapse__redbar{
+.blockCollapse__redbar{    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,16 +27,17 @@
     transition: transform 400ms;
 }
 
-
-.blockCollapse__greybg{
+.blockCollapse__greybar{
+    display: flex;
+    align-items: center;
     width: 60vw;
+    height: 5vh;
     background-color: #f6f6f6;
     padding: 10px;
     border-radius: 0 0 5px 5px;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 400ms cubic-bezier(.32, 0, .07, 1);
-    overflow: hidden;
+    transition: transform 400ms cubic-bezier(.32, 0, .07, 1) ;
 }
 
 .blockCollapse__text{
@@ -45,12 +46,11 @@
     transition: transform 400ms cubic-bezier(.32, 0, .07, 1) 20ms;
 }
 
-.blockCollapse__btnArrow:active{
-    transform: rotate(180deg);
-    
+.blockCollapse__btnArrow:hover{
+    transform: rotate(180deg);    
 }
 
-.blockCollapse__btnArrow:active + .blockCollapse__greybg{
+.blockCollapse__btnArrow:hover + .blockCollapse__greybar{
     transform: scaleY(1);
     .blockCollapse__text{
         transform: translateY(0);

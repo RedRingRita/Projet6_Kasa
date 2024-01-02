@@ -1,0 +1,55 @@
+.caroussel{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    height: 40vh;
+    .caroussel__housingCover{
+        width: 80%;
+        height: 100%;       
+        object-fit: cover;
+        border-radius: 25px;
+    }
+}
+
+.caroussel__arrow{
+    object-fit: none;
+    position: absolute;
+    top: 40%;
+}
+
+.caroussel__arrow--prev{
+    left: 15%;
+}
+
+.caroussel__arrow-next{ 
+    right: 15%;
+}
+
+.numbering{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    color: #FF6060;
+    font-size: 1.3em;
+}
+
+
+@media screen and (max-width: 950px) {
+    .caroussel{
+        display: flex;
+        align-items: center;
+        align-self: center;
+        background-color: black;
+        border-radius: 10px;
+        position: relative;
+        height: 12vh;
+        width: 90vw;
+        .caroussel__housingCover{
+            width: 100%;
+            height: 100%;       
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+}
