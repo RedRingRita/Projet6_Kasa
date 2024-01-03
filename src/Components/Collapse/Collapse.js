@@ -10,9 +10,7 @@ function Collapse({title, text}){
                 <div>{title}</div>
             </div>
             <img src={arrow} alt="flèche déroulante" className="blockCollapse__btnArrow"></img>
-            <div className="blockCollapse__greybar">
-                <div className="blockCollapse__text">{text}</div>
-            </div>
+            <div className="blockCollapse__greybar">{text}</div>
         </div>
     )
 

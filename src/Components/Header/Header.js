@@ -5,7 +5,7 @@ import "./styleHeader.css"
 function Header(){
     return (
         <div className="kasa-header">
-            <img src={imgHeader} alt="header de l'appli" ></img>
+            <Link to="/"><img src={imgHeader} alt="header de l'appli" ></img></Link>
             <ul>
                 <Link to="/">Accueil</Link>
                 <Link to="/about">A Propos</Link>

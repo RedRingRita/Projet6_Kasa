@@ -2,8 +2,6 @@ import logements from "../../database/logements.json"
 import "./styleCard.css"
 import {Link} from "react-router-dom"
 
-
-
 function Card(){
     return(
         <div className="containerCards">

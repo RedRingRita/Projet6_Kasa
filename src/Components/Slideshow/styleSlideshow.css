@@ -13,6 +13,7 @@
 }
 
 .caroussel__arrow{
+    cursor: pointer;
     object-fit: none;
     position: absolute;
     top: 40%;
