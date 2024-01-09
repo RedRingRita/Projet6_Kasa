@@ -3,7 +3,6 @@ import { useState } from "react"
 import prevArrow from "../../assets/prevArrow.png"
 import nextArrow from "../../assets/nextArrow.png"
 
-
 function Slideshow({house}){
 
     let [indexImg, setIndexImg] = useState(0)
@@ -52,7 +51,8 @@ function Slideshow({house}){
                 </div>
             </div>
         )
-    }else {
+    }
+    else {
         return(
             <div className="caroussel">
                 <img src={actualImage} alt={house.title} className="caroussel__housingCover"></img>    

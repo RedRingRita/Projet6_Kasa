@@ -2,8 +2,8 @@ import Footer from "../../Components/Footer/Footer"
 import Header from "../../Components/Header/Header"
 import Banner from "../../Components/Banner/Banner"
 import Collapse from "../../Components/Collapse/Collapse"
-// import CollapseTest from "../../Components/Collapse/CollapseTest"
 import mountain from "../../assets/montagnes.jpg"
+import "./styleAbout.css"
 
 function About(){
     return (

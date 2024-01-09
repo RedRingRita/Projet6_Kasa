@@ -1,40 +1,74 @@
-/* .houseDetails{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+.houseDetails{
+    width: 80%;
+    align-self: center;
+}
 
 .houseDetailsContent{
     color: #FF6060;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.houseDetails__host{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.houseDetails__host--details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .houseDetails__host--picture{
     border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-left: 15px;
 }
 
 .houseDetails__description--name{
     font-size: 2.4em;
+    padding-right: 30px;
+}
+
+.houseDetails__host--rating{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    img{
+        margin-left: 15px;
+    }
 }
 
 .houseDetails__host--name, .houseDetails__description--location{
     font-size: 1.2em;
 }
 
-.houseDetails__description--tags li{
+.houseDetails__description--list{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.houseDetails__description--tags{
     text-align: center;
     background-color: #FF6060;
     color: white;
-    font-size: 1em;
-    width: 5vw;
+    width: 10vw;
     border-radius: 10px;
     padding: 7px;
-    margin: 10px;
+    margin-right: 15px;
 }
 
 .houseDetails__collapse{
     display: flex;
-    width: 80vw;
+    justify-content: space-between;
+}
+
+.houseDetails__collapse--description, .houseDetails__collapse--equipement{
+    width: 47%;
 }

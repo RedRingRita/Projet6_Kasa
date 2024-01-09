@@ -1,0 +1,7 @@
+.content__section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    width: 60vw;
+}
