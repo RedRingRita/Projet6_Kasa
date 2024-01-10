@@ -1,31 +1,33 @@
 .errorText, a{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     color: #FF6060;
 }
 
-.fourOFour{
-    font-size: 18em;
-}
-
-.oups{
-    font-size: 2em;
-}
-
-.errorText div, .errorText a{
-    margin-bottom: 80px;
+.errorText{
+    flex-grow: 1;
+    div, a{
+        margin-bottom: 80px;
+    }
+    div{
+        font-size: 18em;
+        font-weight: bold;
+    }
+    p{
+        font-size: 2em;
+    }
 }
 
 @media screen and (max-width: 850px) {
 
-    .fourOFour{
+    .errorText div{
         font-size: 8em;
     }
 
-    .oups{
+    p{
         font-size: 1em;
         text-align: center;
-    }
-    
+    }    
 }

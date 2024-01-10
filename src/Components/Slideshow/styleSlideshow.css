@@ -10,13 +10,19 @@
         object-fit: cover;
         border-radius: 25px;
     }
-}
-
-.caroussel__arrow{
-    cursor: pointer;
-    object-fit: none;
-    position: absolute;
-    top: 40%;
+    .caroussel__arrow{
+        cursor: pointer;
+        /* object-fit: none; */
+        position: absolute;
+        top: 40%;
+    }
+    .numbering{
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        color: #FF6060;
+        font-size: 1.3em;
+    }
 }
 
 .caroussel__arrow--prev{
@@ -26,15 +32,6 @@
 .caroussel__arrow-next{ 
     right: 15%;
 }
-
-.numbering{
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    color: #FF6060;
-    font-size: 1.3em;
-}
-
 
 @media screen and (max-width: 950px) {
     .caroussel{
@@ -52,5 +49,18 @@
             object-fit: cover;
             border-radius: 10px;
         }
+        .numbering{
+            font-size: 1em;
+        }
+    }
+
+    .caroussel__arrow--prev{
+        height: 30px;
+        left: 5%;
+    }
+    
+    .caroussel__arrow-next{ 
+        height: 30px;
+        right: 5%;
     }
 }

@@ -1,74 +1,114 @@
 .houseDetails{
     width: 80%;
     align-self: center;
-}
-
-.houseDetailsContent{
-    color: #FF6060;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 30px;
-}
-
-.houseDetails__host{
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-}
-
-.houseDetails__host--details{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.houseDetails__host--picture{
-    border-radius: 50%;
-    width: 64px;
-    height: 64px;
-    margin-left: 15px;
-}
-
-.houseDetails__description--name{
-    font-size: 2.4em;
-    padding-right: 30px;
-}
-
-.houseDetails__host--rating{
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 10px;
-    img{
-        margin-left: 15px;
+    flex-grow: 1;
+    .houseDetailsContent{
+        color: #FF6060;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 30px;
+        ul{
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            li{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                background-color: #FF6060;
+                color: white;
+                width: 10vw;
+                border-radius: 10px;
+                padding: 7px;
+                margin-right: 15px;
+            }
+        }
+        .houseDetails__description--name{
+            font-size: 2.4em;
+            padding-right: 30px;
+        }
+        
+        .houseDetails__description--location{
+            font-size: 1.2em;
+        }
+    }
+    .houseDetails__host{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        .houseDetails__host--details{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            div{
+                font-size: 1.2em;
+            };
+            img{
+                border-radius: 50%;
+                width: 64px;
+                height: 64px;
+                margin-left: 15px;
+            }
+        }
+        .houseDetails__host--rating{
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 10px;
+            img{
+                margin-left: 15px;
+            }
+        }
+    }
+    .houseDetails__collapse{
+        display: flex;
+        justify-content: space-between;
+        width: 99%;
+        .houseDetails__collapse--description, .houseDetails__collapse--equipement{
+            width: 47%;
+        }
     }
 }
 
-.houseDetails__host--name, .houseDetails__description--location{
-    font-size: 1.2em;
-}
-
-.houseDetails__description--list{
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-}
-
-.houseDetails__description--tags{
-    text-align: center;
-    background-color: #FF6060;
-    color: white;
-    width: 10vw;
-    border-radius: 10px;
-    padding: 7px;
-    margin-right: 15px;
-}
-
-.houseDetails__collapse{
-    display: flex;
-    justify-content: space-between;
-}
-
-.houseDetails__collapse--description, .houseDetails__collapse--equipement{
-    width: 47%;
+@media screen and (max-width: 950px) {
+    .houseDetails{
+        display: flex;
+        flex-direction: column;
+        .houseDetailsContent{
+            display: flex;
+            flex-direction: column;
+            ul li{
+                width: 110px;
+            }
+        }
+        .houseDetails__host{
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            .houseDetails__host--details{
+                div{
+                    font-size: 1em;
+                }
+                img{
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+            .houseDetails__host--rating{
+                padding-top: 0;
+                img{
+                    margin-right: 10px;
+                    margin-left: 0;
+                    width: 13px;
+                }
+            }
+        }   
+        .houseDetails__collapse{
+            flex-direction: column;
+            .houseDetails__collapse--description, .houseDetails__collapse--equipement{
+                width: 100%;
+            }
+        }
+    }
 }

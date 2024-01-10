@@ -2,60 +2,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
-}
-
-.blockCollapse__redbar{ 
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    max-height: 30px;
-    border-radius: 5px;
-    color: white;
-    background-color: #FF6060;
-    font-size: 1.5em;
-    margin: 40px 0 0 0;
-    padding: 10px;
-}
-
-.blockCollapse__btnArrow--up, .blockCollapse__btnArrow--down{    
-    cursor: pointer;
-    transition: transform 400ms;
-}
-
-.blockCollapse__btnArrow--down{
-    transform: rotate(180deg);    
-}
-
-.blockCollapse__greybar{
-    width: 99%;
-    height: 0px;
-    overflow: hidden;
-    transition: height 400ms cubic-bezier(.32, 0, .07, 1);
-}
-
-.blockCollapse__greybar.hidden{
-    background-color: #f6f6f6;
-    color: #FF6060;
-    border-radius: 0 0 5px 5px;
-    overflow: hidden;
-    transition: height 400ms cubic-bezier(.32, 0, .07, 1);
-}
-
-.blockCollapse__greybar.shown{
-    height: 95px;
-    background-color: #f6f6f6;
-    color: #FF6060;
-    border-radius: 0 0 5px 5px;
-    /* padding: 15px;     */
-}
-
-.blockCollapse__greybar div{
-    transform: translateY(0%);
-    transform-origin: top;
-    transition: transform 0.5s ease 50ms;
-}
-
-.blockCollapse__greybar div{
-    transform: translateY(200%);
+    .blockCollapse__redbar{ 
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-height: 30px;
+        border-radius: 5px;
+        color: white;
+        background-color: #FF6060;
+        font-size: 1.5em;
+        margin-top: 40px;
+        padding: 10px;
+        .blockCollapse__btnArrow--up, .blockCollapse__btnArrow--down{    
+            cursor: pointer;
+            transition: transform 400ms;
+        }
+        
+        .blockCollapse__btnArrow--down{
+            transform: rotate(180deg);    
+        }
+    }
+    .blockCollapse__greybar{
+        width: 99%;
+        overflow: hidden;
+        transition: height 400ms cubic-bezier(.32, 0, .07, 1);
+    }
+    
+    .blockCollapse__greybar.hidden{
+        background-color: #f6f6f6;
+        color: #FF6060;
+        border-radius: 0 0 5px 5px;
+        padding: 0 15px 0 15px;
+        overflow: hidden;
+        transition: height 400ms cubic-bezier(.32, 0, .07, 1) 50ms;
+        div{
+            transition: transform 0.4s ease;
+            transform: translateY(-200%);
+        }
+    }
+    
+    .blockCollapse__greybar.shown{
+        background-color: #f6f6f6;
+        color: #FF6060;
+        border-radius: 0 0 5px 5px;
+        padding: 15px;
+        div{
+            transform-origin: top;
+            transition: transform 0.4s ease 20ms;
+            transform: translateY(0%);
+        }
+    }
 }

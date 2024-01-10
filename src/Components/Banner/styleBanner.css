@@ -11,13 +11,12 @@
         border-radius: 25px;
         filter: brightness(70%);
     }
-}
-
-.imgText{
-    position: absolute;
-    top: 40%;
-    color: white;
-    font-size: 48px;
+    div{
+        position: absolute;
+        top: 40%;
+        color: white;
+        font-size: 48px;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -36,9 +35,8 @@
             object-fit: cover;
             border-radius: 10px;
         }
-    }
-
-    .imgText{
-        font-size: 1.1em;
+        div{
+            font-size: 1.1em;
+        }
     }
 }

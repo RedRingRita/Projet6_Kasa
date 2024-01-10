@@ -3,38 +3,36 @@ import { useState } from "react"
 import prevArrow from "../../assets/prevArrow.png"
 import nextArrow from "../../assets/nextArrow.png"
 
-function Slideshow({house}){
+function Slideshow({housePictures, houseTitle}){
 
     let [indexImg, setIndexImg] = useState(0)
-    const [actualImage, setActualImage] = useState(house.pictures[indexImg])
+    const [actualImage, setActualImage] = useState(housePictures[indexImg])
     
     function imgPrev(){
         if (indexImg === 0){
-            setActualImage(house.pictures[house.pictures.length-1])
-            setIndexImg(house.pictures.length-1)
+            setActualImage(housePictures[housePictures.length-1])
+            setIndexImg(housePictures.length-1)
         } else{
-            setActualImage(house.pictures[indexImg-1])
+            setActualImage(housePictures[indexImg-1])
             setIndexImg(indexImg-1)
         }
     }
 
     function imgNext(){
-        if (indexImg === house.pictures.length-1){
-            setActualImage(house.pictures[0])
+        if (indexImg === housePictures.length-1){
+            setActualImage(housePictures[0])
             setIndexImg(0)
         } else{
-            setActualImage(house.pictures[indexImg+1])
+            setActualImage(housePictures[indexImg+1])
             setIndexImg(indexImg+1)
         }
     }
 
-    if (house.pictures.length > 1){
+    if (housePictures.length > 1){
         return(
             <div className="caroussel">
-                <img src={actualImage} alt={house.title} className="caroussel__housingCover"></img>
-    
-                
-                <div className="display">
+                <img src={actualImage} alt={houseTitle} className="caroussel__housingCover"></img>                
+                <div>
                     <img onClick={(imgPrev)}
                         src={prevArrow} 
                         alt="bouton précédente" 
@@ -46,8 +44,7 @@ function Slideshow({house}){
                         alt="bouton suivante" 
                         className="caroussel__arrow caroussel__arrow-next">
                     </img>
-                    <div className="numbering">{`${indexImg+1}/${house.pictures.length}`}</div>
-    
+                    <div className="numbering">{`${indexImg+1}/${housePictures.length}`}</div>    
                 </div>
             </div>
         )
@@ -55,10 +52,10 @@ function Slideshow({house}){
     else {
         return(
             <div className="caroussel">
-                <img src={actualImage} alt={house.title} className="caroussel__housingCover"></img>    
+                <img src={actualImage} alt={houseTitle} className="caroussel__housingCover"></img>    
             </div>
         )
-    }    
+    }
 }
 
 export default Slideshow

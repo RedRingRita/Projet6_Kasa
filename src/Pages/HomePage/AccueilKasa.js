@@ -5,7 +5,6 @@ import Card from "../../Components/Card/Card"
 import cliff from "../../assets/falaises.jpg"
 import "./styleAccueilKasa.css"
 
-
 function AccueilKasa(){
     return (
         <div className="content">

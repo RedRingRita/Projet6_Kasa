@@ -3,7 +3,6 @@ import Footer from "../../Components/Footer/Footer"
 import Header from "../../Components/Header/Header"
 import Slideshow from "../../Components/Slideshow/Slideshow"
 import HouseDetails from "../../Components/HouseDetails/HouseDetails"
-
 import logements from "../../database/logements.json"
 
 function Housing(){
@@ -21,7 +20,7 @@ function Housing(){
     return (
         <div className="content">
             <Header />
-            <Slideshow house={selectedHouse}/>
+            <Slideshow housePictures={selectedHouse.pictures} houseTitle={selectedHouse.title} />
             <HouseDetails house={selectedHouse}/>
             <Footer />
         </div>

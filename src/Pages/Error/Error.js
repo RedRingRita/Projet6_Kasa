@@ -8,8 +8,8 @@ function Error(){
         <div className="content">
             <Header />
             <div className="errorText">
-                <div className="fourOFour"><b>404</b></div>
-                <div className="oups">Oups! La page que vous demandez n'existe pas.</div>
+                <div>404</div>
+                <p>Oups! La page que vous demandez n'existe pas.</p>
                 <Link to="/">Retourner sur la page d'accueil</Link>
             </div>
             <Footer />

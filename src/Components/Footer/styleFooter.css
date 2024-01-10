@@ -19,10 +19,9 @@
     .kasa-footer{
         font-size: 1em;
         text-align: center;
-    }
-
-    .kasa-footer img{
-        width: 122px;
-        height: auto;
+        img{
+            width: 122px;
+            height: auto;
+        }
     }
 }

@@ -8,7 +8,7 @@ function Card(){
             {logements.map((house) => (
                 <div key={house.id} className="card">
                     <Link to={`/housing/${house.id}`}> <img src={house.cover} alt={house.title}></img> </Link>
-                    <div className="cardText">{house.title}</div>                        
+                    <div>{house.title}</div>                        
                 </div>
                 ))
             }
