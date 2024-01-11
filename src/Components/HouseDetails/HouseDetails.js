@@ -5,6 +5,7 @@ import starActive from "../../assets/star-active.png"
 
 function HouseDetails({house}){
 
+    //partie du composant qui permet d'afficher le nombre d'étoiles par rapport au rating que l'on retrouve grace à la props.
     let redStar = () => {
         const elements = []
 
@@ -21,6 +22,7 @@ function HouseDetails({house}){
     return(
         <div className="houseDetails">
             <div className="houseDetailsContent">
+                {/* On affiche les détails du logement */}
                 <div className="houseDetails__description">
                     <div className="houseDetails__description--name">{house.title}</div>
                     <div className="houseDetails__description--location">{house.location}</div>
@@ -30,7 +32,7 @@ function HouseDetails({house}){
                         ))}
                     </ul>
                 </div>
-
+                {/* On affiche les détails de l'hôte */}            
                 <div className="houseDetails__host">
                     <div className="houseDetails__host--details">
                         <div> {house.host.name}</div>                
@@ -40,6 +42,7 @@ function HouseDetails({house}){
                 </div>
             </div>
 
+            {/* On ajoute le composant collapse */}
             <div className="houseDetails__collapse">
                 <div className="houseDetails__collapse--description">
                     <Collapse title="Description" text={house.description}/>

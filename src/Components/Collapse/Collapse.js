@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 
 function Collapse({title, text}){   
 
+    //Partie du composant qui permet d'afficher les équipements sous forme de liste et non en ligne
     let listerEquipement = (data) => {
         let equipements = []
 
@@ -17,6 +18,8 @@ function Collapse({title, text}){
         return equipements
     }
 
+    //On utilise un useState pour vérifier si la collapse est ouverte ou fermée et lui assigner des classes en fonction de son état ouvert ou fermé
+    //useRef sert à garder la valeur de la taille de la greybar pour pouvoir s'en resservir.
     const toggle = () => {
         setOpen(!open)
     }

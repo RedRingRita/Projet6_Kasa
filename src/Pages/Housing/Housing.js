@@ -10,8 +10,8 @@ function Housing(){
     const {houseId} = useParams()
     const selectedHouse = logements.find((house) => (house.id === houseId));
 
+    //On gère le cas où aucune maison n'est trouvée pour l'ID spécifié
     if (!selectedHouse) {
-        // Gérez le cas où aucune maison n'est trouvée pour l'ID spécifié
         return (
             <Navigate to="/error" />
         );

@@ -2,6 +2,7 @@ import imgHeader from "../../assets/kasaLogo.png"
 import {Link} from "react-router-dom"
 import "./styleHeader.css"
 
+//Composant Header, on y ajoute les liens aux différentes partie du site grace à router
 function Header(){
     return (
         <div className="kasa-header">

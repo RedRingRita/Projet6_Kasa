@@ -8,6 +8,7 @@ function Slideshow({housePictures, houseTitle}){
     let [indexImg, setIndexImg] = useState(0)
     const [actualImage, setActualImage] = useState(housePictures[indexImg])
     
+    //Fonctions du composant permettant la transition entre les différentes images du logements
     function imgPrev(){
         if (indexImg === 0){
             setActualImage(housePictures[housePictures.length-1])
@@ -28,6 +29,7 @@ function Slideshow({housePictures, houseTitle}){
         }
     }
 
+    //s'il y a plus d'une image on affiche les boutons et le numbering
     if (housePictures.length > 1){
         return(
             <div className="caroussel">
@@ -49,6 +51,7 @@ function Slideshow({housePictures, houseTitle}){
             </div>
         )
     }
+    //S'il n'y a qu'une seule image, on n'affiche pas les boutons ni le numbering
     else {
         return(
             <div className="caroussel">

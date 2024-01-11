@@ -14,8 +14,8 @@ root.render(
       <Routes>
         <Route path='/' element={<AccueilKasa/>}/>
         <Route path='/housing/:houseId' element={<Housing/>}/>
-        <Route path='/about' element={<About />} />
-        <Route path='/error' element={<Error />} />
+        <Route path='/about' element={<About />} />        
+        <Route path='/error' element={<Error />} /> {/* Route qui sert à gérer le cas où l'id d'un logement sélectionné n'existe pas */}
         <Route path='*' element={<Error />} />
       </Routes>
     </Router>

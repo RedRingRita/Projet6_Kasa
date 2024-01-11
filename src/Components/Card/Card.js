@@ -2,6 +2,7 @@ import logements from "../../database/logements.json"
 import "./styleCard.css"
 import {Link} from "react-router-dom"
 
+//Composant Card qui créé un lien sous forme d'image en parcourant le fichier logement.json
 function Card(){
     return(
         <div className="containerCards">
