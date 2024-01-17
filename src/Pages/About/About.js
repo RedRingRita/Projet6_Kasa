@@ -9,7 +9,7 @@ import "./styleAbout.css"
 function About(){
     return (
         <div className="content">
-            <Header />
+            <Header aboutUnderline={true}/>
             <Banner img={mountain} alt={"Montages"}/>
             <section className="content__section">
                 <Collapse title="Flabilité" text={about[0]}/>

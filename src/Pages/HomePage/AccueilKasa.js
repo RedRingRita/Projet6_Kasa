@@ -8,7 +8,7 @@ import "./styleAccueilKasa.css"
 function AccueilKasa(){
     return (
         <div className="content">
-            <Header />
+            <Header homeUnderline={true}/>
             <Banner img={cliff} alt={"Falaises"} text={"Chez vous, partout et ailleurs"}/>
             <div className="bgGrey">
                 <Card/> 

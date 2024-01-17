@@ -14,11 +14,13 @@
             margin-left: 57px;
             border: transparent solid 1px
         }
-        a:hover{
+        .underlined{
             border-bottom: #FF6060 solid 1px;
         }
     }
 }
+
+
 
 
 @media screen and (max-width: 950px) {

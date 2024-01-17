@@ -7,7 +7,7 @@ import logements from "../../database/logements.json"
 
 function Housing(){
 
-    const {houseId} = useParams()
+    const {houseId} = useParams() /*useParams permet d'utilise les paramètres d'une URL*/
     const selectedHouse = logements.find((house) => (house.id === houseId));
 
     //On gère le cas où aucune maison n'est trouvée pour l'ID spécifié
